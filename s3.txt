@@ -1,0 +1,130 @@
+S3 : Simple storage service : 
+
+block based storage : EBS / Instancestore :  Designed to run OS.. 
+object based storage : s3 : Designed to store the flat files.. We cannot install/run the applications.. 
+network based storage : EFS / FSx : Storage over the network.. 
+
+
+S3: Object based storage.
+S3 platform global, doesn't required region selection. 
+Whenever we are creating a bucket, i'll ask us to choose the region.
+In s3 we use buckets to store the data. (Bucket = Folder with unique namespace)
+
+Bucket name limitations: 
+--> Bucket names are unique across the globe.
+--> Min 3 char, Max 63 Char..
+--> Should not start with . , end with ., adjesent .., No special characters
+--> No Capital letters
+--> Should not resemble IP address format.
+
+
+Standard URL : 
+https://s3.ap-south-1.amazonaws.com/bucketname/objectname
+https://s3.ap-south-1.amazonaws.com/avinashh.website/A.png
+
+Virtual path : 
+https://bucketname.s3.regioncode.amazonaws.com/objectname
+https://avinash3.s3.ap-south-1.amazonaws.com/RDS+task.txt
+
+https://bucketname.s3.amazonaws.com/objectname
+https://avinash3.s3.amazonaws.com/RDS+task.txt
+
+==> If we want to share any data from our bucket, firstly enable "Public access settings" at bucket level. 
+
+
+
+S3 Standard : Frequently accesed data : Data spread across >=3 AZs.. : Data available immedeatly
+	Availability : 99.99 % 
+	Durability : 99.999999999 %
+
+S3 Standard-IA : Less Freq accessed data : Data spread across >=3 AZs.. : Data available immedeatly
+	Availability : 99.9 % 
+	Durability : 99.999999999 %
+
+OneZone-IA : Less Freq accessed data : Data spread across 1 AZs.. : Data available immedeatly
+	Availability : 99.5 % 
+	Durability : 99.999999999 %
+
+S3 Glacier : Long time archievals :  Data spread across >=3 AZs.. : Data not available immedeatly.. We need to restore the view the data.. Restoration : Minutes to Hours..
+	Availability : 99.99 % 
+	Durabiluty : 99.999999999 %
+
+S3 Glacier Deep Archieve: Long time archievals :  Data spread across >=3 AZs.. : Data not available immedeatly.. We need to restore the view the data.. Restoration : Hours..
+	Availability : 99.99 % 
+	Durability : 99.999999999 %
+
+RRS : Redused redundancy storage : Not Recommended by AWS : Non Imp data , Easily reprodusable data.. 
+	Availability : 99.99 % 
+	Durability : 99.99 %
+
+Intelligent tier : If we are unsure about the access patterns, we can choose this.. 
+
+
+FREE TIER : S3-Standard Only
+--> 5 GB Standard storage / Month
+--> 2000 PUT (upload)
+--> 20,000 GET (download)
+
+
+Bulk retrieval : Typically within 5-12 hours
+Standard retrieval : Typically within 3 - 5 hours
+Expedited retrieval : Typically within 1 - 5 minutes when retrieving less than 250MB
+
+
+________________________________________________________________________________________
+
+D: 12/06/2020
+
+S3 Versioning : 
+--> Track all changes happening on our s3 objects.
+--> Works as a backup option too
+
+When Versioning : HIDE..
+--> Whatever the file we delete, we'll get a delete marker.
+--> Delete the Delete Markernto get that object back.. 
+
+When Versioning : SHOW..
+--> FIle delete permenetly
+
+
+Lifecycle management rule : WE can transit objects storage class, and we can trigger to delete the objects automatically. 
+
+
+Website : 
+--> S3 Supports static website hosting option.
+
+bucket name should be same as domain name (avinash.website)
+--> For our website 99.99% avilablitiy 99.999999999% Durability
+
+--> We need to provide atleast read only on our data to load the website.
+
+
+http://avinash.com.s3-website.ap-south-1.amazonaws.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
