@@ -98,8 +98,77 @@ bucket name should be same as domain name (avinash.website)
 
 --> We need to provide atleast read only on our data to load the website.
 
+_______________________________________________________________________________________
 
-http://avinash.com.s3-website.ap-south-1.amazonaws.com
+D: 13/06/2020
+
+SRR (Same Region Replication) / CRR (Cross Region Replication) : 
+
+Task : Create bucket 1 and bucket 2 in Same region and configure the SRR repolication between these buckets.
+
+
+KMS : Key Management Service : 
+
+
+--> In-Transit Encryption
+	--> SSL (Secure Socket Layer) / TLS (Transport Layer Security)
+
+--> Server Side Encyrption / at-rest
+	--> SSE - S3 (Encryption and decryption manged by s3 platform)
+	--> SSE - KMS (KMS Generated and Manged keys encrypt and decrypt the data)
+	--> SSE - C (Customer Provided) (Customer generated and uploads the keys to KMS, 
+					KMS is going to manage the encry & Decry process)
+
+--> Client Side Encryption : Customers who dont want to uplaod any unenrypted data to s3 platform, they can choose CSE. On him ON-Premise/Corporate network by using his own keys he is going to encrypt the data.. That encrypted data, we can send to aws.
+
+
+AES-256 / SSE-Se  and aws/s3 ==> Whoever have valid permissions on platform they can access the data.. == FREE TIER ELIGIBILITY
+
+Customer Managed Key :
+
+Symmetric : A single encryption key that is used for both encrypt and decrypt operations
+
+Asymmetric : A public and private key pair that can be used for encrypt/decrypt or sign/verify operations
+
+
+Key Administrator Permissions : 
+
+Key Usage Permissions : 
+
+
+______________________________________________________________________________________
+
+D: 16/06/2020
+
+Object lock : 
+--> Should be enabled when we create bucket. 
+--> Versioning must be enabled. 
+
+Governance mode can be disabled by AWS accounts that have specific IAM permissions.
+Compliance mode cannot be disabled by any user, including the root account.
+
+
+Transfer acceleration : If we want to upload / download data via edge locations.
+
+Events : 
+--> SQS : Simple Queue service ..
+--> Lambda : Serverless architecture.. 
+--> SNS : Simple Notification Service : 
+	==> Navigate to "SNS" Create a "TOPIC" and add subscribers. 
+
+
+Requester pays : Instead of bucket owner, who is requesting the data, he'll get charged for the request / data transfer. 
+
+
+
+___________________________________
+
+https://join.slack.com/t/awswithavinash/shared_invite/zt-f4xzhxmb-c22h9F4TMz3UQH9nLK~8Vw
+
+_________________________________
+
+
+
 
 
 
