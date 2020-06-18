@@ -167,25 +167,41 @@ https://join.slack.com/t/awswithavinash/shared_invite/zt-f4xzhxmb-c22h9F4TMz3UQH
 
 _________________________________
 
+_________________________________________________________________________________________
+
+D: 17/06/2020
+
+ACL : Access COntrol List.. 
+
+List Object : 
+Write Object : 
 
 
+BP : JSON format.. We can use policy generator.. 
+
+IAMUser 1 : S3FullAccess	==> Bucket (User2, Readonly on objects/ restrict put operation)
+
+IAM User 2 : S3 Full Access
 
 
+Policy Generator:
 
 
+Effect  : DENY
+--> Allow 
+--> Deny
+
+Principle : IAM USer ARN Name / IAM group ARN Name.. arn:aws:iam::518084852393:user/user2
+
+Action : What do you want to allow/deny..   : PUT OBJECT
+
+Resources : On what bucket : arn:aws:s3:::user1.bucket.asd
+
+Object Level : arn:aws:s3:::user1.bucket.asd/*
+Bucket Level : arn:aws:s3:::user1.bucket.asd
 
 
-
-
-
-
-
-
-
-
-
-
-
+____________________________
 
 
 
