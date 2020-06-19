@@ -201,7 +201,43 @@ Object Level : arn:aws:s3:::user1.bucket.asd/*
 Bucket Level : arn:aws:s3:::user1.bucket.asd
 
 
-____________________________
+_______________________________________________________________________________________
+
+D: 18/06/2020
+
+http status codes: 
+
+2XX : Success/OK
+3XX : Redirection error
+4XX : CLient side error
+5XX : Server side error
+
+Metrics : CLoudWatch.. 
+
+CW : Service to monitor all the AWS resources.
+
+Storage class analysis : You can enable storage class analysis for the entire bucket, shared prefix, or tags. Amazon S3 analyzes your access patterns and suggests a candidate age to transition objects to Standard - IA for a lifecycle rule.
+
+
+Import / Export : 
+
+100TB : Migrate all that data to s3 : 
+--> AWS SnowBall 	: 80TB : 200$/Job.. 10 Days free.. 
+--> AWS Snowball Edge	: Comes along with compute capacity : 100TB : 250$/Job, 10days free, 20$-25$/day.. 
+--> AWS Snowmobile	: PB Scale : 1PB with 1 GBPS internet, 80% utilization.. 20-25 years for migration... !!!!!!
+
+
+
+AWS Direct Connect : Dedicated fiber connectivity to our on-prem.. 
+
+__________________________________________________________________________________
+
+D: 19/06/2020
+
+3500 PUT/Sec (Uploading/overwriting)
+5500 Get/Sec (Downloading)
+
+
 
 
 

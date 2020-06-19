@@ -1,0 +1,45 @@
+EC2 : Elastic COmpute Cloud
+
+		--> CPU, Memory, Network, Disk		AWS EC2
+
+
+ec2 = virtual servers = Instance
+
+server = Virtual machine = Azure VM = GCP engine = Instance
+
+
+On-Demand ec2 instance : No stable workloads, unpredictable usages, temporary testing.. 
+Pricing : /hr, /sec(Min of 60 Sec)
+
+Reserved Instances : predictable worklods, stable configuration, longterm usages.. 
+Pricing : 1 Yr / 3 Yrs.. 
+
+	Standard RI : We cannot change the configuration.. 
+	Convertable RI : We can modify the instance configuration.. 
+	Scheduled RI : repeated usages, persistant requests.. 
+
+Pricing : Full Upfront : Pay 100% and get your instance.. 
+	 Partial Upfront : pay 30-50% now, pay hourly basis with reduced price.. 
+	 No Upfront : Pay everything monthly basis.. 
+
+Spot Instances : If we have flexible start/stop durations.. 
+We need to bid against the AWS pricing, When aws instance price is reduced or equal to customer quoted price, we will get this instance.
+
+c4.4xlarge = 2$/hr.. 1$/hr, from date, to date..
+--> Spot fleet request
+--> Spot pricing history
+
+EC2 is a region specific service.
+
+--> Mumbai
+--> NV
+
+
+
+https://join.slack.com/t/awswithavinash/shared_invite/zt-f4xzhxmb-c22h9F4TMz3UQH9nLK~8Vw
+
+
+
+
+
+
