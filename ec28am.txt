@@ -35,8 +35,81 @@ EC2 is a region specific service.
 --> NV
 
 
-
 https://join.slack.com/t/awswithavinash/shared_invite/zt-f4xzhxmb-c22h9F4TMz3UQH9nLK~8Vw
+
+
+________________________________________________________________________________________
+
+D: 22/06/2020
+
+How to launch a Windows ec2 instance.. 
+
+Instance = Virtual Server runs in an AZ.. 
+
+Mumbai = ap-south-1 : ap-south-1a, 1b & 1c.. 
+
+Step 1 : Choose an AMI (Amazon Machine Image) : 
+--> Quickstart  
+--> My AMI 
+--> Community AMI
+--> AWS Marketplace
+
+OS Hardening : CIS Center for internet security: Set OS benchmarks..  
+
+Step 2 : Choose the Instance type..  : vCPU, Memory and Network Performance.. 
+
+General Purpose : Stable perf.. 	: t2, t3, m4, m5, m5a.. 
+Compute optimized : More CPU power	: c4, c5, c5n
+GPU Instances : More grahic resources	: p2, g4dn
+Memory optimised : More memory resources: r4, r5, r5a, r5ad, x1e, Z1d
+Storage optimized : More disk usage 	: d2, i2, i3, i3en.. 
+
+launch t2.micro.. 1 vCPU, 1 GB RAM.. 
+
+c5.xlarge  : 4vCPU, 8 RAM
+m5.xlarge : 4vCPU, 16 RAM
+t3.large : 2vCPU, 8 RAM
+
+Step 3: Configure Instance Details
+
+Shutdown behavior : STOP
+Enable termination protection : Enabled
+
+Step 4: Add Storage
+
+Step 5 : Add tags
+
+Step 6: Configure Security Group
+
+Windows : RDP : 3389 : 0.0.0.0/0
+Linux : SSH : 22 : 0.0.0.0/0
+
+Public Key and PrivateKey mechanism..  Encryption / Decryption.. 
+AWS keeps, publicKey, WHen we launch any instance, AWS automatically place the public key in that instance...
+Privatekey will be given to us when we create a keypair.. (file format .pem).. 
+
+
+
+How to connect : 
+Verify these settings if you are npt able to connect : Windows : RDP : 3389 : 0.0.0.0/0
+
+Remote desktop connection : Goto start and serach for "Remote Desktop connection"
+Open --> Run --> give "mstsc"
+
+
+Task : Launch an ec2 instance and get connect and change the password, try with the keypair password and custom setup password.. Which one works..!!
+
+Task 2 : Along with administrator, create an additional user and provide RDP access to that user, try to connect along with "administrator".
+
+
+
+
+
+
+
+
+
+
 
 
 
