@@ -101,6 +101,51 @@ Task : Launch an ec2 instance and get connect and change the password, try with 
 
 Task 2 : Along with administrator, create an additional user and provide RDP access to that user, try to connect along with "administrator".
 
+_______________________________________________________________________________________
+
+D: 23/06/2020
+
+Security Groups : 
+--> Acts as Firewall at Instance level.
+--> No need to worry about the outbound rules, as SG is stateful.
+--> We cannot "DENY" the traffic, only we can "ALLOW". 
+--> We always needs to takes care about the inboudn rules.
+
+NACL : Stateless..
+
+--> CHanges to the SG, takes effect immediately. No need to restart/stop/start instance. all existing instances also opened with the traffic.
+
+
+Ec2 Day wise :
+
+--> WIndows Launch
+--> SG / NIC / EIP
+--> Volumes
+--> Snapshot and DLM
+--> CustomAMI
+-------> With Linux OS
+--> CLI and Roles
+--> EFS 
+--> Systems Manager
+--> Placement Groups and remaning.. 
+
+
+EIP : ELastic IP Address : Dedicated IP address allocated to our AWS account, Where we can use this with an ec2 instance / NIC.
+(NO FREE TIER ELIGIBILITY)
+
+--> If we required fixed IP address for our instance, we'll go with EIP.. 
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
