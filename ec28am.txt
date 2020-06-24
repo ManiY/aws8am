@@ -121,22 +121,65 @@ EIP : ELastic IP Address : Dedicated IP address allocated to our AWS account, Wh
 
 --> If we required fixed IP address for our instance, we'll go with EIP.. 
 
+________________________________________________________________________________________
+
+D: 24/06/2020
+
+Shared tenancy : Underlying hardware shared with multiple customers.
+Dedicated tenancy : H/w Shared with only one customer.
+	--> Dedicated Instance
+	--> Dedicated Host
 
 
+Volumes : 
+
+Root Device Types : 
+--> Instance Store VOlumes : 
+--> EBS Volumes
+
+Instance Store Volumes:
+--> No FREE TIER ELigibility
+--> We cannot STOP/Start the insatnce. 
+--> Data is Ephemeral (Storage is Ephemeral).
+--> Due to any reson, If instance is Stopped / Underlying Hardware failure happens, we will loss all the data...!!!!
+--> We cannot resize the volumes. 
+
+EBS : Elastic Block Storage..
+
+Root Volume: Runs OS : gp2, io1 & standard.. 
+
+General Purpose SSD : GP2 : Generally we use this, Supports most of the workloads, dev, test, low-latency interactive applications..  
+Min: 1 GB , Max 16 TB
+Performance : 1 GB we will get 3 IOPS... With Min of 100... Max: 16,000
+
+Provisioned IOPS : io1 : Highest performance ebs volumes.. I/O Intensisive application, Relational DB, If you application required specific IOPS count.. 
+Min: 4 GB , Max 16 TB
+Performance : 1 GB we will get 50 IOPS... But we can choose required IOPS count..
+Max: 64,000 (NITRO Instance)
+
+Magnetic : standard : cheapest storage option.. IOPS N/A, We will get base performance.. 
+Min: 1 GB , Max 1 TB
 
 
+Throughput optimised HDD : St1 : low cost HDD volume, BigData, Data warehousing, log processing..  IOPS: 500.. Throughput : 500 MB/s.. 
+Min: 500 GB , Max 16 TB
+
+Cold HDD : sc1 : St1 : lowest cost HDD volume, Fewer scans per day..  BigData, Data warehousing, log processing..  IOPS: 250.. Throughput : 250 MB/s.. 
+Min: 500 GB , Max 16 TB
+
+VOlume Performance we measure using IOPS (Input and Output per Second).
+
+** Decrease size is not possible.
 
 
+Task : 
 
+--> Add a new volume to your instance, Vol: 1 gb, GP2.. and make it avialble.. 
+--> Increase the volume size to 2gb and make it avilable at OS level.
 
+Task 2 : Launch another ec2 instance is same AZ as Task 1... , Detach the 2gb volume from task 1 instance and attach it to task 2 instance, verify all data avialble or not..!!!
 
-
-
-
-
-
-
-
+ 
 
 
 
