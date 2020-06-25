@@ -180,6 +180,28 @@ Task :
 Task 2 : Launch another ec2 instance is same AZ as Task 1... , Detach the 2gb volume from task 1 instance and attach it to task 2 instance, verify all data avialble or not..!!!
 
  
+_______________________________________________________________________________________
+
+D: 25/06/2020
+
+
+Free Tier : 750 Hours/Month... 1 Instance..
+--> EBS VOlumes, Will in In-Use state only.. Don't stop more than 2 Instances..
+
+
+Snapshot : Backup option for our EBS volumes.. 
+--> SS stores in S3 platform, But not on our s3 buckets.
+--> We can use this SS to Share the VOlume or make it public.
+--> SS are point-in-time copies. 
+
+LifeCycle Manager (DLM) : 
+
+
+
+
+
+
+
 
 
 
