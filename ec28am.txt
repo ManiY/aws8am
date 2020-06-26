@@ -196,11 +196,34 @@ Snapshot : Backup option for our EBS volumes..
 
 LifeCycle Manager (DLM) : 
 
+_______________________________________________________________________________
+JUNE20 
+
+https://www.udemy.com/course/linuxwithavinash/?couponCode=JUNE20
+
+https://www.udemy.com/course/gitbyavinash/?couponCode=JUNE20
+
+https://www.udemy.com/course/jenkinswithavinash/?couponCode=JUNE20
+
+_______________________________________________________________________________
+
+D: 26/06/2020
 
 
+EC2 Instane --> OS hardening (CIS) / Putty / pdf / AV / Custom WP / Web Server ...!!!!!
+
+Need 10 ec2 instance with the required standards/ Applications.>!!!!
 
 
+GoldenAMI : Customized AMI : 
 
+
+ENI : 
+
+
+Task : Launch an ec2 instance and make it as a golden AMI with all previous tasks.. And launch an instance from GAMI test you got all applications/services..!!!!
+
+Task ; register to Linux COurse..!!!
 
 
 
