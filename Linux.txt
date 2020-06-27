@@ -1,0 +1,86 @@
+D: 27/06/2020
+
+Step 1 : Choose an AMI.
+	--> Choose an Amazon Linux 2 AMI (Amazon Linux AMI, Redhat, Ubuntu, Suse)
+
+Step 2 : Choose instance type (t2.micro)
+
+Step 3 : Choose additonal option
+
+Step 4 ; Choose Storage.
+	Amazon Linux : 8 GB Standard / Magnetic
+
+Step 5 : Add tags
+
+Step 6 : Configure Security Groups
+
+	Windows : RDP : 3389
+	Linux : SSH (Secure Shell) : 22		: 0.0.0.0/0 / Custom / MyIP
+
+Step 7 : Review and Create a Keypair.
+
+
+Default Username for Most of the Linux Instance : ec2-user
+redhat : ec2-user / redhat
+ubuntu : ec2-user / ubuntu
+
+Option 1 : Selct Instance, Navigate to "Actions" --> Coose "Connect" --> browser-based SSH connection.. Default UN : ec2-user
+
+Option 2 : Enable OpenSSH on you windows Desktop and Use your command prompt to connect to Linux Instance.. 
+https://winaero.com/blog/enable-openssh-server-windows-10/
+
+--> Navigate to the path where our keypair is stored.
+
+Mac/linux: ssh -i keypairname ec2-user@publicaddress
+
+
+option 3 : Use GIT option.  
+--> Install "GIT for Windows" and use GIT bash.
+https://git-scm.com/download/win
+
+Go to the folder, where our keypair is stored. Right click --> "Git Bash Here"
+
+ssh -i keypairname ec2-user@publicaddress
+
+
+Option 4 : Using Putty.
+putty.org and download the "Putty" and "PuttyGen"
+
+Putty application doesn't support .PEM format, It needs .ppk file. Now we need to convert the existing .pem file to .ppk file using "PuttyGen".
+
+Open putty --> Give the "PublicIP", Navigate to COnenction --> SSH --> Select "Auth" --> Browse the Converted .ppk file.  CLick on connect.
+
+__________________
+
+
+Make Linux instance as a Web Server..!!
+
+whoami				--> tells us as a what user we are working now.
+sudo su				--> Switch to root user.
+yum update -y			--> update our OS with latest patches (updates).
+
+
+rpm 	--> Redhat pakage manager
+
+yum --> yellodog update manager
+
+yum install "packagename"
+
+yum install httpd -y
+service httpd start			--> To start the Apache service
+chkconfig httpd on	--> TO make httpd as a logon service / startup type as automatic
+
+
+service httpd start / stop / restart / status
+
+
+
+Task : Launch a Linux instance and make it as a Apache webserver.
+
+Task 2 : Launch an Linux Instance and make it as Nginx web server.
+
+
+
+ 
+
+
