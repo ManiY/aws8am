@@ -80,7 +80,76 @@ Task : Launch a Linux instance and make it as a Apache webserver.
 Task 2 : Launch an Linux Instance and make it as Nginx web server.
 
 
+_______________________________________________________________________________________
 
- 
+D: 29/06/2020
+
+
+IIS : C:\inetpub\wwwroot\index.html
+Apache webserver : /var/www/html/ --> Create Index.html
+
+pwd			--> print working Directory
+cd			--> Change Directory
+ls			--> List from current directory
+
+
+Linux : nano, vi, vim
+VIM : vim filename
+
+cd /var/www/html
+vim index.html
+
+I 	--> INSERT Mode
+Esc 	--> From Isnert Mode to ReadOnly mode
+:wq	--> Write the changes and Quit
+:q!	--> Quit forcefully without writing the changes	
+
+
+______________________
+
+Windows : FAT, FAT32, NTFS, ReFS
+Linux : ext3, ext4, xfs
+
+
+New volume name : xvdf		(/dev/xvdf)
+
+In Linux OS, we generally mpunt to Directory only. (Dir = Folder)
+
+mkdir 	--> Make Directory
+
+mkfs -t xfs /dev/xvdf
+
+mount /dev/xvdf newvolume
+
+cd newvolume... add some files.. 
+
+
+We need to add an entry in "fstab" for parmanent mount.. (/etc/fstab)
+
+vim /etc/fstab
+
+
+TO get the entry information... 
+cat /etc/mtab			--> Run this command to get entry information about the 				new volume
+
+
+
+Task : https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/recognize-expanded-volume-linux.html
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
