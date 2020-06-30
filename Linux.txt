@@ -137,11 +137,35 @@ cat /etc/mtab			--> Run this command to get entry information about the 				new 
 Task : https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/recognize-expanded-volume-linux.html
 
 
+______________________________________________________________________________________
+
+D: 30/06/2020
+
+Launch a Linux Instance.. 
 
 
+Userdata: We can deliver the command when we are launching our ec2 instance for the first time. Bootstrapscript
+
+#!/bin/bash
+yum update -y
+yum install httpd -y
+service httpd start
+chkconfig httpd on
+echo "<h1>This is a userdata Website</h1>" >> /var/www/html/index.html
 
 
+Windows:
 
+<powershell>
+tzutil /s "India Standard Time"
+</powershell>
+
+
+<script>
+echo Current Date and Time is >> C:\Windows\Temp\restart.txt
+echo %DATE% %TIME% >> C:\Windows\Temp\restart.txt
+</script>
+<persist>true</persist>
 
 
 
