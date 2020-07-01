@@ -168,6 +168,39 @@ echo %DATE% %TIME% >> C:\Windows\Temp\restart.txt
 <persist>true</persist>
 
 
+_______________________________________________________________________________________
+
+D: 01/07/2020
+
+Metadata :
+
+ELB : 
+
+--> Classic ELB : http, https, tcp, upd...   : Previoud Generation
+--> Application ELB : http, https
+--> Network ELB : TCP, UDP, TLS.. 
+
+
+Classic ELB : RoundRObin .. 
+
+Task: Launch multiple web servers in multiple AZs, and configure the Classic ELB.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
