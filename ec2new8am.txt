@@ -1,0 +1,241 @@
+D: 27/06/2020
+
+Step 1 : Choose an AMI.
+	--> Choose an Amazon Linux 2 AMI (Amazon Linux AMI, Redhat, Ubuntu, Suse)
+
+Step 2 : Choose instance type (t2.micro)
+
+Step 3 : Choose additonal option
+
+Step 4 ; Choose Storage.
+	Amazon Linux : 8 GB Standard / Magnetic
+
+Step 5 : Add tags
+
+Step 6 : Configure Security Groups
+
+	Windows : RDP : 3389
+	Linux : SSH (Secure Shell) : 22		: 0.0.0.0/0 / Custom / MyIP
+
+Step 7 : Review and Create a Keypair.
+
+
+Default Username for Most of the Linux Instance : ec2-user
+redhat : ec2-user / redhat
+ubuntu : ec2-user / ubuntu
+
+Option 1 : Selct Instance, Navigate to "Actions" --> Coose "Connect" --> browser-based SSH connection.. Default UN : ec2-user
+
+Option 2 : Enable OpenSSH on you windows Desktop and Use your command prompt to connect to Linux Instance.. 
+https://winaero.com/blog/enable-openssh-server-windows-10/
+
+--> Navigate to the path where our keypair is stored.
+
+Mac/linux: ssh -i keypairname ec2-user@publicaddress
+
+
+option 3 : Use GIT option.  
+--> Install "GIT for Windows" and use GIT bash.
+https://git-scm.com/download/win
+
+Go to the folder, where our keypair is stored. Right click --> "Git Bash Here"
+
+ssh -i keypairname ec2-user@publicaddress
+
+
+Option 4 : Using Putty.
+putty.org and download the "Putty" and "PuttyGen"
+
+Putty application doesn't support .PEM format, It needs .ppk file. Now we need to convert the existing .pem file to .ppk file using "PuttyGen".
+
+Open putty --> Give the "PublicIP", Navigate to COnenction --> SSH --> Select "Auth" --> Browse the Converted .ppk file.  CLick on connect.
+
+__________________
+
+
+Make Linux instance as a Web Server..!!
+
+whoami				--> tells us as a what user we are working now.
+sudo su				--> Switch to root user.
+yum update -y			--> update our OS with latest patches (updates).
+
+
+rpm 	--> Redhat pakage manager
+
+yum --> yellodog update manager
+
+yum install "packagename"
+
+yum install httpd -y
+service httpd start			--> To start the Apache service
+chkconfig httpd on	--> TO make httpd as a logon service / startup type as automatic
+
+
+service httpd start / stop / restart / status
+
+
+
+Task : Launch a Linux instance and make it as a Apache webserver.
+
+Task 2 : Launch an Linux Instance and make it as Nginx web server.
+
+
+_______________________________________________________________________________________
+
+D: 29/06/2020
+
+
+IIS : C:\inetpub\wwwroot\index.html
+Apache webserver : /var/www/html/ --> Create Index.html
+
+pwd			--> print working Directory
+cd			--> Change Directory
+ls			--> List from current directory
+
+
+Linux : nano, vi, vim
+VIM : vim filename
+
+cd /var/www/html
+vim index.html
+
+I 	--> INSERT Mode
+Esc 	--> From Isnert Mode to ReadOnly mode
+:wq	--> Write the changes and Quit
+:q!	--> Quit forcefully without writing the changes	
+
+
+______________________
+
+Windows : FAT, FAT32, NTFS, ReFS
+Linux : ext3, ext4, xfs
+
+
+New volume name : xvdf		(/dev/xvdf)
+
+In Linux OS, we generally mpunt to Directory only. (Dir = Folder)
+
+mkdir 	--> Make Directory
+
+mkfs -t xfs /dev/xvdf
+
+mount /dev/xvdf newvolume
+
+cd newvolume... add some files.. 
+
+
+We need to add an entry in "fstab" for parmanent mount.. (/etc/fstab)
+
+vim /etc/fstab
+
+
+TO get the entry information... 
+cat /etc/mtab			--> Run this command to get entry information about the 				new volume
+
+
+
+Task : https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/recognize-expanded-volume-linux.html
+
+
+______________________________________________________________________________________
+
+D: 30/06/2020
+
+Launch a Linux Instance.. 
+
+
+Userdata: We can deliver the command when we are launching our ec2 instance for the first time. Bootstrapscript
+
+#!/bin/bash
+yum update -y
+yum install httpd -y
+service httpd start
+chkconfig httpd on
+echo "<h1>This is a userdata Website</h1>" >> /var/www/html/index.html
+
+
+Windows:
+
+<powershell>
+tzutil /s "India Standard Time"
+</powershell>
+
+
+<script>
+echo Current Date and Time is >> C:\Windows\Temp\restart.txt
+echo %DATE% %TIME% >> C:\Windows\Temp\restart.txt
+</script>
+<persist>true</persist>
+
+
+_______________________________________________________________________________________
+
+D: 01/07/2020
+
+Metadata :
+
+ELB : 
+
+--> Classic ELB : http, https, tcp, upd...   : Previoud Generation
+--> Application ELB : http, https
+--> Network ELB : TCP, UDP, TLS.. 
+
+
+Classic ELB : RoundRObin .. 
+
+Task: Launch multiple web servers in multiple AZs, and configure the Classic ELB.
+
+_______________________________________________________________________________________
+
+D: 02/07/2020
+
+
+_______________________________________________________________________________________
+
+D: 03/07/2020
+
+
+Blue and green deployment using TGs..
+
+Sticky Sessions : 
+Loggin on ELB : Access Logs..
+
+Application ELB : Round Robin.. Least outstanding requests..
+Network ELB : Flow Hash algirothm.. 
+
+VPC FLow logs..
+
+** Network ELB : We can define our EIP. This feature not avialble with Application ELB / Classic ELB.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
