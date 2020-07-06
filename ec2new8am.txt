@@ -208,9 +208,43 @@ VPC FLow logs..
 ** Network ELB : We can define our EIP. This feature not avialble with Application ELB / Classic ELB.
 
 
+_______________________________________________________________________________________
+
+D: 04/07/2020
+
+
+Cloudwatch : 
+--> Basic Monitoring : 5 Minutes
+--> Detailed Monitoring / Enhanced Monitoring(db)
 
 
 
+ASG: 
+
+--> Create an AMI
+--> Create an ELB
+--> Create an Auto Scaling Group
+	--> Create a Launch COnfiguration (What settings you want to give when instance is launched in ASG)
+	--> Create an ASG
+
+Task : Create ASG as we discussed.
+
+
+______________________________________________________________________________________
+D: 06/07/2020
+
+
+EFS : Elastic File System
+
+--> EFS works with NFS (Network File system) protocol. 
+
+
+Windows : FSx.. 
+--> FSx uses SMB protocol.
+--> Directory Service..
+
+FSx : https://www.youtube.com/watch?v=s15ljWSTWY4
+AWS Managed Directory : https://www.youtube.com/watch?v=RDlBoAHVmZs
 
 
 
