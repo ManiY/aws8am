@@ -246,6 +246,74 @@ Windows : FSx..
 FSx : https://www.youtube.com/watch?v=s15ljWSTWY4
 AWS Managed Directory : https://www.youtube.com/watch?v=RDlBoAHVmZs
 
+________________________________________________________________________________________
+
+D: 07/07/2020
+
+Windows Open Browser : http://169.254.169.254/latest/meta-data/
+Linux : curl http://169.254.169.254/latest/meta-data/
+
+curl http://169.254.169.254/latest/user-data/
+
+ami-id
+ami-launch-index
+ami-manifest-path
+block-device-mapping/
+events/
+hibernation/
+hostname
+identity-credentials/
+instance-action
+instance-id
+instance-type
+local-hostname
+local-ipv4
+mac
+metrics/
+network/
+placement/
+profile
+public-hostname
+public-ipv4
+public-keys/
+reservation-id
+security-groups
+
+AWS CLI : 
+
+IAM User : 
+--> Management console access
+--> programatic access : AccessKeyId and SecretAccessKey
+
+https://aws.amazon.com/cli
+
+
+aws --version
+
+aws servicename commands
+aws s3 ls
+aws s3 ls s3://bucketname
+
+copy: 
+aws s3 cp source destination
+
+
+Task : Launch an ec2 instance using CLI. Terminate instance using CLI.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
