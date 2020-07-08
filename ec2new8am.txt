@@ -300,12 +300,23 @@ aws s3 cp source destination
 
 Task : Launch an ec2 instance using CLI. Terminate instance using CLI.
 
+_______________________________________________________________________________________
+
+D: 08/07/2020
+
+
+Role : Perform activities onbelhf of us / iam user.
+
+
+s3 access required for our ec2 instance.. : 
+
+SSM role: Systems Manager : 
+
+For CrossAccount Access : https://www.youtube.com/watch?v=sZiiB4yF0VY
 
 
 
-
-
-
+Lightsail: SaaS
 
 
 
