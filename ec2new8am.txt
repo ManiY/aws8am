@@ -319,8 +319,8 @@ For CrossAccount Access : https://www.youtube.com/watch?v=sZiiB4yF0VY
 Lightsail: SaaS
 
 
-
-
+Task: 
+create an index.html and uplaod to an s3 bucket..  While launching an ec2 instance, using userdata, make it as a webserver.. and get the object from s3 bucket to /var/www/html path...    
 
 
 
