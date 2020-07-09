@@ -314,20 +314,27 @@ SSM role: Systems Manager :
 
 For CrossAccount Access : https://www.youtube.com/watch?v=sZiiB4yF0VY
 
-
-
 Lightsail: SaaS
-
 
 Task: 
 create an index.html and uplaod to an s3 bucket..  While launching an ec2 instance, using userdata, make it as a webserver.. and get the object from s3 bucket to /var/www/html path...    
 
+_______________________________________________________________________________________
 
+D: 09/07/2020
 
+Systems Manager : 
 
+#!/bin/bash
+yum update -y
 
+https://aws.amazon.com/premiumsupport/knowledge-center/ec2rescue-windows-troubleshoot/
 
+Task : Launch an ec2 instance, change the password and forgot the password..  Launch another ec2 instance, perform rescue operqation on 1st instance.
 
+Task : Install putty application in your ec2 instance without login.
+
+________________________________________________________________________________________
 
 
 
