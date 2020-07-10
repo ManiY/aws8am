@@ -336,9 +336,20 @@ Task : Install putty application in your ec2 instance without login.
 
 ________________________________________________________________________________________
 
+D: 10/07/2020
+
+Elastic Beanstalk : PaaS : Where we can focus on developement part instead of infra provisioning.
 
 
+Placement groups : 
+--> Cluster PG : group of instances run together in an AZ.  Low network latency and high n/w throughput. Tightly coupled node-to-node communciation. 
 
+--> Partition PG : group of Instances spread across logical partitions. one partition h/w failure won't effect another partitions operations. Every partition have it's own n/w and power connectivity.
+
+--> Spread PG : to reduce h/w failures. our ec2 instances runs in different hardwares. This can span across Multiple AZ.
+
+
+https://nareshit.s3.ap-south-1.amazonaws.com/ec2exam.pdf
 
 
 
