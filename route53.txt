@@ -1,0 +1,53 @@
+Route53 : AWS DNS Service.. NO FREE TIER ELIGIBILITY..
+
+Domain Name $ : approx. 200-500INR
+Hosted zone 0.50$/Month..
+
+
+TLD : Toplevel domain name :  .com, .in, .us
+SLD : Secondlevel domain name : .co.in, .goiv.in
+
+avinash.in  .com .airtel .avinash
+
+Domain registrers : GoDaddy, bigrock, web.com, freenom.com, aws r53... 
+
+ICANN : domain uniqueness.. : whoisdb.. 
+IANA : rootzone db..
+
+1 time configuration at project level..!!!
+
+DOMAIN NAME = HOSTED ZONE
+
+When we create a hosted zone, we'll get 2 DNS records automatically..
+SOA : Start of Authority record : Zone information
+NS : Name Server Records : 
+
+A record : Address Record :   Map our "DOMAIN <--> IP"
+Alias record :  --> ELB / CFD / Bean
+
+99% of the times, we use "A + Alias".
+
+Routing Policy : 
+--> Simple RP
+--> Weighted RP
+--> Latency RP
+--> Failover RP
+--> GeoLocation RP
+--> Multivalue answer RP
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
