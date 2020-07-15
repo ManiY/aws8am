@@ -1,0 +1,68 @@
+VPC : Virtual Private Cloud : 
+
+VPC = Building
+
+
+Public IP : Unique across the globe : IANA/ICANN--> Purchase from them.. BYOIP
+Private IP : Internal communication : Works only with-in network.. : Free to use.. 
+
+IPv4 : 32 bit : 2^32 IP Addresses
+IPv6 : 128 bit : 2^128 IP Addresses
+
+IPv4 : 
+
+Class A : 0-126		(/8)
+Class B : 128-191	(/16)
+Class C : 192-223	(/24)
+
+Class D : Multicasting/broadcasting  224-239
+Class E : Future / R&D 240-255
+
+
+Every class contains a Private IP range, for internal usage without paying anything to any organisation /ISP.
+
+Private IP : 
+CLASS A: 10.0.0.0 to 10.255.255.255
+CLASS B: 172.16.0.0 to 172.31.255.255
+CLASS C: 192.168.0.0 to 192.168.255.255
+
+
+/32	/31	/30	/29	/28	/27	/26	/25	/24 ...	/16	/0
+
+2^0	2^1	2^2	2^3	2^4	2^5	2^6	2^7	2^8 ...		2^32
+
+1	2	4	8	16	32	64	128	256 ... 65536	4B/N
+
+
+AWS Reservs 5 IPs..
+
+AWS Supports :  /28 - /16	(Network 11 instance, 65531 instances)
+
+Class A : N.H.H.H  : 
+Class B : N.N.H.H  : 
+Class C : N.N.N.H  : 192.168.100.0
+
+192.168.100.(0-255)
+192.168.101.(0-255)
+192.168.255.()
+
+N.N.H.H
+172.16.0.0
+
+172.16.(0-255).(0-255)
+172.17.(0-255).(0-255)
+
+
+VPC : https://www.youtube.com/watch?v=Ze_X53wdogA
+
+192.168.0.0/16	--> Entire VPC
+
+192.168.100.0/24	--> Subnet /1a (251 usable IPs)
+192.168.200.0/24 	--> Subnet /1b (251 usable IPs)
+
+
+
+
+
+
+
