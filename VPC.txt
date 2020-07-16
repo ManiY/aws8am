@@ -35,6 +35,10 @@ CLASS C: 192.168.0.0 to 192.168.255.255
 
 
 AWS Reservs 5 IPs..
+1 Network ID
+1 Brodcost ID
+2 DNS Servers
+1 Future use
 
 AWS Supports :  /28 - /16	(Network 11 instance, 65531 instances)
 
@@ -59,6 +63,61 @@ VPC : https://www.youtube.com/watch?v=Ze_X53wdogA
 
 192.168.100.0/24	--> Subnet /1a (251 usable IPs)
 192.168.200.0/24 	--> Subnet /1b (251 usable IPs)
+
+______________________________________________________________________________________
+
+D: 16/07/2020
+
+Every region contains one Default VPC. 
+DefualtVPC contains all Public subnets.
+WE cannot choose the IP ranges for default VPC.
+
+
+Public Subnet : Internet facing / internet exposed subnet.	: ELB 
+Private Subnet : Secure Subnet without internet facing. 	: Web / Datbase
+
+CustomVPC : 
+
+
+VPN : Virtual Private Network : 
+
+Step 1 : Create a VPC (Name: CustomVPC, CIDR : 192.168.0.0/16)
+
+Step 2 : Create Subnets within this VPC.
+
+	PublicSubnet : ap-south-1a : 192.168.100.0/24
+	PrivateSubnet : ap-south-1b : 192.168.200.0/24
+
+Step 3 : Create an InternetGateway and Associate with out CustomVPC.
+	(oneVPC can contains only one IGW)
+
+
+Step 4 : Navigate to "Routetable"
+	--> Create a Route "PublicRoute"
+		--> Navigate to "SUbnetAssociation", choose "PublicSUbnet" 
+		--> Goto Routes "Add a route" --> "0.0.0.0/0 via InternetGateway"
+
+	--> Create a route "PrivateRoute"
+		--> Navigate to "SUbnetAssociation", choose "PrivateSUbnet"
+
+Step 5 (Optional) : Navigate to subnets, choose the "PublicSUbnet" --> Enable 			"AutoAssign public ip setting".
+
+
+Task : Create a VPC as we discussed..  (Multiple Times)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
