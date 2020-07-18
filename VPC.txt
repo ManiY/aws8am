@@ -91,7 +91,6 @@ Step 2 : Create Subnets within this VPC.
 Step 3 : Create an InternetGateway and Associate with out CustomVPC.
 	(oneVPC can contains only one IGW)
 
-
 Step 4 : Navigate to "Routetable"
 	--> Create a Route "PublicRoute"
 		--> Navigate to "SUbnetAssociation", choose "PublicSUbnet" 
@@ -104,6 +103,51 @@ Step 5 (Optional) : Navigate to subnets, choose the "PublicSUbnet" --> Enable 		
 
 
 Task : Create a VPC as we discussed..  (Multiple Times)
+
+_______________________________________________________________________________________
+
+D: 17/07/2020
+
+Jump Server / Bastian host : A dedicated ec2 instance runs in CustomVPC public subnets, to get connected to private subnet ec2 instance.  Most of the times we use windows ec2 instance for app/client flexibility. 
+
+NAT Gateway/Instance: Designed to provide internet for our Private SUbnet ec2 instances. This NAT Gateway/Instance, always runs in CustomVPC public Subnet.
+
+NATGATEWAY:  NO FREE TIER ELIGIBILITY
+Navigate to "NAT Gateway" --> Create NAT Gateway, Generate an EIP, and choose CustomVPC "Public Subnet"... CLick on create.
+
+Navigate to "Route" --> Choose the "Private Route" --> Add a route 0.0.0.0/0 --> NATGateway.
+
+NAT Instance: Free Tier
+--> Navigate to community AMI, Search for NAT, Choose amazon LinuxAMI, Launch the instance in CustomVPCs, Public SUbnet.. (http, https is opened in SG)
+--> Choose the NAT Instance, Goto Network Settings, Disable Source/destination check.
+
+Navigate to "Route" --> Choose the "Private Route" --> Add a route 0.0.0.0/0 --> Choose Instance, Select "NAT Instance".
+
+
+
+_______________
+
+Enable Logs on VPC : 
+
+--> VPC = Flow Logs.. 
+--> We can enable flowlogs at VPC level , / Subnet levels also.
+
+--> We can store/send the logs to 
+	--> S3 bucket : Get ARN of s3 bucket and store logs in s3 bucket.
+	--> Cloudwatch Logs : Navigate to CW, Create a LogGroup.
+			Choose the created loggroup, Create an IAM role "Flowlogsrole"
+
+
+
+Task : COnfigure SGs of Jump and Private subnets as we diccussed.
+
+Task 2 : Provide internet to your private subnet ec2 instance, using NAT Gateway/Instance.
+
+
+NACL : 
+VPC Peering : 
+VPC with Linux : 
+
 
 
 
