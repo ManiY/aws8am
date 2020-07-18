@@ -137,16 +137,59 @@ Enable Logs on VPC :
 	--> Cloudwatch Logs : Navigate to CW, Create a LogGroup.
 			Choose the created loggroup, Create an IAM role "Flowlogsrole"
 
-
-
 Task : COnfigure SGs of Jump and Private subnets as we diccussed.
 
 Task 2 : Provide internet to your private subnet ec2 instance, using NAT Gateway/Instance.
 
+________________________________________________________________________________________
+
+D: 18/07/2020
 
 NACL : 
-VPC Peering : 
-VPC with Linux : 
+--> We need to takes care about the Inbound rules and outbound rules.
+--> We need to open ephemeral ports. 
+--> We have ALLOW / DENY option. 
+--> Lowest rule will have highest priority.
+
+https://docs.aws.amazon.com/vpc/latest/userguide/vpc-network-acls.html#nacl-ephemeral-ports
+
+____
+
+VPC Peering : It enable us to establish connectivity between multiple VPCs.
+
+--> VPC is a Non-Transitive peering.
+--> Source and Destination networks/VPCs should not contain same IP ranges.
+
+
+		Requester VPC Info			AccepterVPC Info
+CIDR		192.168.0.0/16				172.31.0.0/16
+VPC ID		vpc-02fbca21f99732317			vpc-0c84f896a6c0bb6fe
+Region		ap-south-1				us-east-1
+Aws Acc num	
+
+Edit mumbai rt with NV IP address via PCX.
+Edit NV rt with Mumbai IP address voa PCX.
+
+__________
+
+Endpoints: 
+Gateway endpoint : s3 and DynamodB
+
+Enable VPN Connectivity : https://www.youtube.com/watch?v=JSTyjISscNg
+Transit Gateway : https://www.youtube.com/watch?v=xyLlMBHy2wc
+
+
+ssh -i keypair.pem ec2-user@ipaddress
+
+
+--> For IPv6, TO provide interenet to private subnet instance we cannot use NAT Gatreway.. We use "Igress Only Interent Gateway"
+
+
+
+
+
+
+
 
 
 
