@@ -1,0 +1,57 @@
+RDS : Relational Database Service : 
+
+--> Amazon Aurora (Mysql / postgresql compatable) : 
+--> MySql : mysql workbench
+--> OracleDB : toad
+--> Mariadb : workbench
+--> MSSQL : SSMS (Sql Server Management studio)
+--> PostGreSQL (pgadmin)
+
+NoSQL : Serverless : DynamoDB
+Elasticache : In-memory caching solution.
+	--> MemcacheD
+	--> Redis
+
+DMS : Database Migration Service
+SMS : Server Migration Service
+
+Homogenious : mysql --> DMS --> mysql
+Heterogenious : mongoDB --> SCT (Schema Conversion tool) --> DMS --> Uplaoding AWS
+
+
+RDS License :
+--> General public license
+--> Li (License Included)
+--> BYOL (bring your own license)
+
+--> For RDS instances, we don't get an IP address, we'll get an Endpoint name. Using this Endpoint name, we need to connect to our DB.
+
+
+Task : Launch a Mysql RDS instance in CustomVPC Private Subnet. Launch a Jumpserver in CustomVPC Public Subnet install mysql workbecnh and connect to the RDS instance.
+
+Launch MSSQL Express edition in RDS,  Launch a Jumpserver in CustomVPC Public Subnet install SSMS and connect to the RDS instance.
+
+Launch PostGreSQL Express edition in RDS,  Launch a Jumpserver in CustomVPC Public Subnet install PgAdmin and connect to the RDS instance.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
