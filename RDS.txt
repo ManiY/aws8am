@@ -26,12 +26,31 @@ RDS License :
 
 --> For RDS instances, we don't get an IP address, we'll get an Endpoint name. Using this Endpoint name, we need to connect to our DB.
 
-
 Task : Launch a Mysql RDS instance in CustomVPC Private Subnet. Launch a Jumpserver in CustomVPC Public Subnet install mysql workbecnh and connect to the RDS instance.
 
 Launch MSSQL Express edition in RDS,  Launch a Jumpserver in CustomVPC Public Subnet install SSMS and connect to the RDS instance.
 
 Launch PostGreSQL Express edition in RDS,  Launch a Jumpserver in CustomVPC Public Subnet install PgAdmin and connect to the RDS instance.
+
+________________________________________________________________________________________
+D: 21/07/2020
+
+MultiAZ Deployment : Another copy of our DB creates in Another AZ.. Whenever primary copy goes down for maintennace/reboot, automatically backup copy will take all the load.
+--> Purely for Disaster recover purpose. Not for Scaling purpose. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
