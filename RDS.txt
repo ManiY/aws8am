@@ -39,10 +39,37 @@ MultiAZ Deployment : Another copy of our DB creates in Another AZ.. Whenever pri
 --> Purely for Disaster recover purpose. Not for Scaling purpose. 
 
 
+_______________________________________________________________________________________
+
+D: 22/07/2020
+
+Snapshots : Backup copies of our RDS instance.
+--> Manual SS
+--> Automated SS
+
+InPlace restoration.. Is not possible with RDS. 
+We can restore as a new RDS Instance.
 
 
+Aurora:
+Amazon Aurora with MySQL compatibility
+Amazon Aurora with PostgreSQL compatibility
+
+Regional : You provision your Aurora database in a single AWS Region.
+Global : You can provision your Aurora database in multiple AWS Regions. Writes in the primary AWS Region are replicated with typical latency of less than 1 sec to secondary AWS Regions.
+--> We have an option to choose multipe writer copies with Aurora.
+--> Aurora Supports Max DB Size : 64 TB  (Remaining all DB : 16 TB)
 
 
+DynamoDB : AWS NoSQL Database Service.. Serverless Architecture.. 
+
+How many Read / Write required for application..!!!! 
+
+
+https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/TicTacToe.html
+
+
+Task : https://aws.amazon.com/getting-started/hands-on/deploy-drupal-with-amazon-rds/4/
 
 
 
