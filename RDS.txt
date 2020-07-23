@@ -71,6 +71,34 @@ https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/TicTacToe.html
 
 Task : https://aws.amazon.com/getting-started/hands-on/deploy-drupal-with-amazon-rds/4/
 
+______________________________________________________________________________________
+
+D: 23/07/2020
+
+Elasticache : Identical requests on datasets.. : In-Memory Caching solutions for our RDS.
+	--> MemcacheD
+	--> Redis
+
+DynamoDB : DAX (DynamoDB Accelerator)
+
+static data from s3 / application delivering with ELB : CLaching.. Cloudfront..
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
