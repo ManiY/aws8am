@@ -1,0 +1,54 @@
+Cloudfront : 
+--> 
+____________________________________________________________________________________
+
+D: 24/07/2020
+
+ACM : Amazon Certificate Manager : 
+
+Task : COnfigure https for website with ELB. 
+
+Cloudtrail : Logging service.. Track all the aws usage.. : NO FREE TIER ELIGIBILITY
+--> Enabled by default, 90 Days activities.. 
+--> We can create a trail, and store all logs in s3 platform.
+
+--> Management events : all activities : Management events are records of actions that are performed on or within resources in your AWS account. These are also known as control plane operations.
+
+--> Data Events : s3 and Lambda : Data events are records of resource operations performed on or within a resource. These are also known as data plane operations. 
+
+--> Insights events : Insights events are records that capture an unusual call volume of write management APIs
+
+https://docs.aws.amazon.com/athena/latest/ug/cloudtrail-logs.html
+--> SPlunk
+--> DataDog
+--> Cloudcheckr
+
+AWS Config : Inventory and track the changes happening on resources.. NO FREE TIER..
+Timeline for resources: 
+
+
+AWS Trusted Advisor : 
+
+Personal Health Dashboard : 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
