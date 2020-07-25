@@ -31,6 +31,53 @@ AWS Trusted Advisor :
 
 Personal Health Dashboard : 
 
+_______________________________________________________________________________________
+
+D: 25/07/2020
+
+AWS GLobal Accelerator: NEw certification topic..
+
+AWS WAF : AWS Web Application Firewall : 
+	--> Application ELB
+	--> Cloudfront
+	--> API Gateway
+
+--> IP Matching
+--> String Match
+--> Bad Bots
+--> Cross Site Scripts
+--> SQL Injection
+
+AWS Shield : Enabled bydefaultly for all the AWS accounts. DDoS attacks.. 
+
+How to mitigate the DDoS attacks.. 
+
+ELB
+--> Use WAF
+--> Use ASG backend
+--> Use Cloudfront
+
+AWS Inspector : 
+
+AWS Shared Responsibility Model for Security :
+
+--> Security "OF" the Cloud  : AWS : AZ, DC, Physical, Edge : XEN / Nitro.. 
+--> Security "IN" the Cloud  : ec2 (22 : 0.0.0.0/0), weak pwd, s3 public, not using encrytpions
+
+
+SQS : Simple Queue service : 
+
+Monolithic application : SAP
+Decoupled application : ASG
+
+
+
+
+
+
+
+
+
 
 
 
