@@ -170,7 +170,7 @@ import sys
 
 client=boto3.client('ec2')
 sns = boto3.client('sns')
-sns_topic = "arn:aws:sns:ap-south-1:518084852393:S3Notifications"
+sns_topic = "arn:aws:sns:ap-south-1:518084852393:Instancealert"
 sns_subject =  "Non-Encrypted EBS Volumes"
 Non_Compliant=[]
 
@@ -197,7 +197,7 @@ def lambda_handler(event, context):
             noncompliant='Non Compliant Volume id %s.' %volume['VolumeId']
             Non_Compliant.append(noncompliant)
             msg = msg + "\n" + noncompliant
-            sns.publish(TopicArn='arn:aws:sns:ap-south-1:518084852393:S3Notifications', Message = "\n" + msg, Subject='EBS Non Encrypted Volume')
+            sns.publish(TopicArn='arn:aws:sns:ap-south-1:518084852393:Instancealert', Message = "\n" + msg, Subject='EBS Non Encrypted Volume')
     # return Non_Compliant
 
 _______________________________________________________________________________
@@ -209,13 +209,63 @@ CloudFormation: YSON and YAML..
 https://www.youtube.com/watch?v=YYXdXT2l-Gg&list=PL-osiE80TeTt2d9bfVyTiXJA-UTHn6WwU
 
 
+______________________________________________________________________________________
+
+D: 28/07/2020
+
+Gateway endpoint: We created for Mumbai region
+aws s3 ls --region ap-south-1
+
+
+Using SNS : We can send Push notifications.. 
+
+SES : SImple Email Service : We can verify our Email/Domain and we can send email on behalfof that domain name / email.
+For bulk sending, we can use PinPoint Service.
+
+
+Cloudwatch: Dashboard.. 
+
+Project 1 : ec2, s3, rds, elb.. 
+
+___________________________
+
+INPUT PATH:
+
+{"instance-id":"$.detail.instance-id", "state":"$.detail.state", "time":"$.time", "region":"$.region", "account":"$.account"}
+
+INPUT TEMPLATE: 
+
+"At <time>, Status of your EC2 instance <instance-id> in the AWS Region <region> has changed to <state>."
+
+_______________________
+
+SMS : Get you Cloudendure licenses.. 
 
 
 
+https://www.youtube.com/watch?v=wmcBSHpoHhs
 
+https://www.youtube.com/watch?v=Vx9lRRY-shg
 
+https://www.youtube.com/watch?v=RDlBoAHVmZs	(1 Month free)
 
+https://www.youtube.com/watch?v=Ca259gg6SoM	Existing AD
 
+https://www.youtube.com/watch?v=LWi9-XL2vWQ	Join Linux Instance to AD
+
+https://www.youtube.com/watch?v=iRhJDGp-ew8
+
+https://www.youtube.com/watch?v=JSTyjISscNg
+
+https://www.youtube.com/watch?v=ZVCCjSGPRUA
+
+https://www.youtube.com/watch?v=s15ljWSTWY4	For Windows FSx.. 
+
+https://www.youtube.com/watch?v=8xf1RpPdcHs
+
+https://www.youtube.com/watch?v=bdaHMRqCBkg
+
+https://www.youtube.com/watch?v=46julItfeFQ
 
 
 
