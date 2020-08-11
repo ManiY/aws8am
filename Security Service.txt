@@ -243,29 +243,29 @@ SMS : Get you Cloudendure licenses..
 
 
 
-https://www.youtube.com/watch?v=wmcBSHpoHhs
+https://www.youtube.com/watch?v=wmcBSHpoHhs	[ How to deploy AWS Storage Gateway by aws ]
 
-https://www.youtube.com/watch?v=Vx9lRRY-shg
+https://www.youtube.com/watch?v=Vx9lRRY-shg	[ AWS Server Migration Services Tutorial step by step by aws ]
 
-https://www.youtube.com/watch?v=RDlBoAHVmZs	(1 Month free)
+https://www.youtube.com/watch?v=RDlBoAHVmZs	(1 Month free) [ AWS Directory Service creation step by step by aws ]
 
-https://www.youtube.com/watch?v=Ca259gg6SoM	Existing AD
+https://www.youtube.com/watch?v=Ca259gg6SoM	Existing AD  [ AD Connector configuration step-by-step by aws ]
 
-https://www.youtube.com/watch?v=LWi9-XL2vWQ	Join Linux Instance to AD
+https://www.youtube.com/watch?v=LWi9-XL2vWQ	Join Linux Instance to AD [ How to join Amazon Linux instance to Active Directory with AWS ]
 
-https://www.youtube.com/watch?v=iRhJDGp-ew8
+https://www.youtube.com/watch?v=iRhJDGp-ew8	[ AWS Databse Migration Service by aws ]
 
-https://www.youtube.com/watch?v=JSTyjISscNg
+https://www.youtube.com/watch?v=JSTyjISscNg	[ openvpn Deployment in AWS by aws ]
 
-https://www.youtube.com/watch?v=ZVCCjSGPRUA
+https://www.youtube.com/watch?v=ZVCCjSGPRUA	[ AWS DataSync by aws ]
 
-https://www.youtube.com/watch?v=s15ljWSTWY4	For Windows FSx.. 
+https://www.youtube.com/watch?v=s15ljWSTWY4	For Windows FSx.. [ What is FSx and How to configure for Windows Instances ]
 
-https://www.youtube.com/watch?v=8xf1RpPdcHs
+https://www.youtube.com/watch?v=8xf1RpPdcHs	[ Migrate any Server to AWS using CloudEndure by AWS ]
 
-https://www.youtube.com/watch?v=bdaHMRqCBkg
+https://www.youtube.com/watch?v=bdaHMRqCBkg	[ VM migration from Azure to AWS using SMS Connector ]
 
-https://www.youtube.com/watch?v=46julItfeFQ
+https://www.youtube.com/watch?v=46julItfeFQ	[ AWS Transfer for SFTP (secure File transfer protocol) ]
 
 
 
